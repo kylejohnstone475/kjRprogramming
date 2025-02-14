@@ -1,0 +1,11 @@
+#install.packages("MASS")
+library("MASS")
+A <- matrix(1:100, nrow=10)
+det(A)
+solve(A)
+ginv(A)
+
+B <- matrix(1:1000, nrow=10)
+det(B)
+solve(B)
+head(ginv(B))
