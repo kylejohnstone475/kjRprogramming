@@ -1,0 +1,67 @@
+---
+title: 'Module 12 Assignment'
+author: "Kyle Johnstone"
+date: "2025-04-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# The Conversion Package
+
+The premise of this package is to offer a mechanism for simple and easy conversions
+for Americans. This package will include conversions for things such as money and measurements. The use of this package could be ideal for traveling or when working with foreign tools/equipment. 
+
+## Money
+
+Conversions for US Dollars into other currencies. The function will accept a dollar amount and convert it to the desired currency. 
+
+```{r "money"}
+# USD to Euro
+to_euro <- function(dollars, rate = 0.88) {
+  euro <- dollars * rate
+  return(euro)
+}
+# USD to Yen
+to_yen <- function(dollars, rate = 143.59) {
+  yen <- dollars * rate
+  return(yen)
+}
+# USD to CAD
+to_canadian <- function(dollars, rate = 1.39) {
+  canadian <- dollars * rate
+  return(canadian)
+}
+
+```
+
+## Weight
+
+Conversions of pounds into common metric units. The function will accept a numerical value for pounds and convert it into the desired unit. 
+
+```{r "weight"}
+# Pounds to Grams
+to_grams <- function(lbs, rate = 453.592) {
+  grams <- lbs * rate
+  return(grams)
+}
+
+to_kg <- function(lbs, rate = 0.453592) {
+  kg <- lbs * rate
+  return(kg)
+}
+```
+
+## Temperature
+
+Conversion from Fahrenheit to Celsius. The function will accept a numerical value for degrees Fahrenheit and convert it into Celsius. 
+
+```{r "Temperature"}
+# Fahrenheit to Celsius
+to_C <- function(F) {
+  C <- (F - 32) * (5/9)
+  return(C)
+}
+```
